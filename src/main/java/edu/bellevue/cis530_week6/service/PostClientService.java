@@ -1,4 +1,11 @@
 package edu.bellevue.cis530_week6.service;
 
-public class PostClientService {
+import edu.bellevue.cis530_week6.dto.PostDto;
+
+import java.util.List;
+
+public interface PostClientService {
+    List<PostDto> getAllPosts();
+    PostDto getPostById(Long id);
+    List<PostDto> getPostsByUserId(Long userId);
 }

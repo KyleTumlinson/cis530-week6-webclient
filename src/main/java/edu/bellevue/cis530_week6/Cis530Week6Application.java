@@ -1,3 +1,7 @@
+/*
+	HERE GOES THE CITATION
+ */
+
 package edu.bellevue.cis530_week6;
 
 import org.springframework.boot.SpringApplication;
