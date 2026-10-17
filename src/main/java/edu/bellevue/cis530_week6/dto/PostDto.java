@@ -1,5 +1,5 @@
 /*
-    proffessor citation goes here
+    Liang, Y.D. (2019). Introduction to Java Programming and Data Structures: Comprehensive Version (12th ed.). Pearson Education, Inc.
  */
 package edu.bellevue.cis530_week6.dto;
 

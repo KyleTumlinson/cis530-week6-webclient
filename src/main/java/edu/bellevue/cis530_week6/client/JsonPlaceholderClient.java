@@ -1,5 +1,5 @@
 /*
-    Modified citation goes here
+    Payne, D. (2021). CSD 405 Intermediate Java Programming. Bellevue University. Modified by A. Student 2021
  */
 package edu.bellevue.cis530_week6.client;
 
@@ -19,6 +19,11 @@ public class JsonPlaceholderClient {
 
     public JsonPlaceholderClient(WebClient webClient) {this.webClient = webClient;}
 
+    /*
+        Method to get all posts from our json server
+        No params
+        returns the list of PostDtos
+     */
     public List<PostDto> getAllPosts(){
         List<PostDto> posts = webClient.get()
                 .uri("/posts")
@@ -30,6 +35,11 @@ public class JsonPlaceholderClient {
         return posts != null ? posts : Collections.emptyList();
     }
 
+    /*
+        Method that gets a specific post by id from json server
+        @param id Long
+        @return the PostDto converted from the Post retrieved from the json server
+     */
     public PostDto getPostById(Long id){
         try{
                 return webClient.get()
@@ -46,6 +56,11 @@ public class JsonPlaceholderClient {
         }
     }
 
+    /*
+        Method that gets all posts made by a specific user by ID
+        @param userId Long
+        @return the list of PostDtos converted from the Post retrieved from the json server
+     */
     public List<PostDto> getPostsByUserId(Long userId){
         // use queryParam to send userId as a query parameter
         List<PostDto> posts = webClient.get()

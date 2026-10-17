@@ -1,5 +1,5 @@
 /*
-    Guided citation goes here
+    Payne, D. (2021). CSD 405 Intermediate Java Programming. Bellevue University. Modified by A. Student 2021
  */
 
 package edu.bellevue.cis530_week6.controller;
@@ -23,16 +23,30 @@ public class PostClientController {
         this.postClientService = postClientService;
     }
 
+    /*
+        GetMapping to get all posts
+        @return response entity with a 200 ok Http status and body containing all posts
+     */
     @GetMapping
     public ResponseEntity<List<PostDto>> getAllPosts(){
         return ResponseEntity.ok(postClientService.getAllPosts());
     }
 
+    /*
+        GetMapping to get specific post by post ID
+        @param id Long
+        @return response entity with a 200 ok Http status and body containing the post details
+     */
     @GetMapping("/{id}")
     public ResponseEntity<PostDto> getPostById(@PathVariable Long id){
         return ResponseEntity.ok(postClientService.getPostById(id));
     }
 
+    /*
+        GetMapping to get all posts made by user with userId
+        @param userId Long
+        @return response entity with a 200 ok Http status and body containing the post details
+     */
     @GetMapping("/user/{userId}")
     public ResponseEntity<List<PostDto>> getPostsByUserId(@PathVariable Long userId){
         return ResponseEntity.ok(postClientService.getPostsByUserId(userId));

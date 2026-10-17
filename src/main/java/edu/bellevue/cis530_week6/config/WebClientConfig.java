@@ -1,5 +1,5 @@
 /*
-    Professor citation goes here
+    Liang, Y.D. (2019). Introduction to Java Programming and Data Structures: Comprehensive Version (12th ed.). Pearson Education, Inc.
  */
 package edu.bellevue.cis530_week6.config;
 
@@ -13,6 +13,10 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 @Configuration
 public class WebClientConfig {
+
+    /*
+        WebClient configuration for making HTTP requests to external APIs or microservices
+     */
     @Bean
     public WebClient webClient(@Value("${jsonplaceholder.api.base-url}") String baseUrl) {
         return WebClient.builder()

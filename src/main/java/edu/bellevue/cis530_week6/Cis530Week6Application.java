@@ -1,5 +1,5 @@
 /*
-	HERE GOES THE CITATION
+	Payne, D. (2021). CSD 405 Intermediate Java Programming. Bellevue University. Modified by A. Student 2021
  */
 
 package edu.bellevue.cis530_week6;
